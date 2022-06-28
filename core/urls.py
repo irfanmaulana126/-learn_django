@@ -19,4 +19,9 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('users.urls')),
+    path('product/', include('product.urls')),
 ]
+
+admin.site.site_header = "Belajar Admin"
+admin.site.site_title = "Belajar Admin Portal"
+admin.site.index_title = "Belajar Admin Portal"

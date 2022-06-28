@@ -46,6 +46,10 @@ class MyUser(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['date_of_birth']
 
+    class Meta:
+        db_table = 'User'
+        managed = True
+
     def __str__(self):
         return self.email
 
